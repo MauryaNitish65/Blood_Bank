@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#FF0000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="Stay Connected"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/textInputLayout"
+            android:hint="Name"
+            app:startIconDrawable="@drawable/ic_person"
+            android:layout_width="match_parent"
+            app:boxBackgroundColor="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:textColor="#ffffff"
+            app:endIconMode="clear_text"
+            android:textSize="16sp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/textphone"
+            android:hint="Phone Number"
+            app:startIconDrawable="@drawable/ic_person"
+            android:layout_width="match_parent"
+            app:boxBackgroundColor="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="#ffffff"
+            app:endIconMode="clear_text"
+            android:textSize="16sp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/textAddress"
+            android:hint="Address"
+            app:startIconDrawable="@drawable/ic_person"
+            android:layout_width="match_parent"
+            app:boxBackgroundColor="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="#ffffff"
+            app:endIconMode="clear_text"
+            android:textSize="16sp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:hint="Blood Group"
+            app:startIconDrawable="@drawable/ic_person"
+            android:layout_width="match_parent"
+            app:boxBackgroundColor="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="#ffffff"
+            android:textSize="16sp">
+            <AutoCompleteTextView
+                android:id="@+id/bloodGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_wave__3_"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
