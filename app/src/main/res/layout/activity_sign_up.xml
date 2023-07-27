@@ -16,13 +16,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@color/red"
         app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
+
 
                 <TextView
                     style="@style/TextAppearance.AppCompat.Title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
+                    android:layout_marginBottom="15dp"
                     android:text="@string/stay_connected"/>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -122,6 +124,7 @@
                         android:id="@+id/dob"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:inputType="date"
                         />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -161,6 +164,38 @@
                         android:textSize="16sp"
                         />
                 </RadioGroup>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxBackgroundColor="@color/white"
+                    app:endIconMode="password_toggle"
+                    app:startIconDrawable="@drawable/lock"
+                    android:hint="@string/password"
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/setpassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxBackgroundColor="@color/white"
+                    app:endIconMode="password_toggle"
+                    app:startIconDrawable="@drawable/lock"
+                    android:hint="@string/confirm_password"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/confirmpassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/signUp"
                     android:layout_width="match_parent"
@@ -180,6 +215,7 @@
                     android:textSize="15sp"
                     android:textAlignment="center"
                     />
+
             </LinearLayout>
 
 
