@@ -15,7 +15,7 @@
         android:paddingEnd="32dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="#FF0000"
+        android:background="@color/red"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -23,14 +23,14 @@
             style="@style/TextAppearance.AppCompat.Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#ffffff"
+            android:textColor="@color/white"
             android:text="Login Now" />
 
         <TextView
             style="@style/TextAppearance.AppCompat.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#ffffff"
+            android:textColor="@color/white"
             android:layout_marginTop="8dp"
             android:text="Please login to continue using app" />
 
@@ -43,7 +43,7 @@
             android:hint="Email"
             android:textSize="16sp"
             android:layout_marginTop="32dp"
-            android:textColor="#ffffff"
+            android:textColor="@color/white"
             android:inputType="textEmailAddress"/>
 
         <EditText
@@ -54,18 +54,19 @@
             android:ems="10"
             android:hint="Password"
             android:textSize="16sp"
-            android:textColor="#ffffff"
+            android:textColor="@color/white"
             android:layout_marginTop="16dp"
             android:inputType="textPassword" />
 
+
         <Button
-            android:id="@+id/btnLogin"
-            android:background="@drawable/btn_primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#ffffff"
-            android:layout_marginTop="24dp"
-            android:text="LogIn" />
+            android:layout_marginTop="16dp"
+            android:background="@drawable/btn_primary"
+            android:text="Log In"
+            android:textColor="@color/red"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/btnSign"
@@ -73,11 +74,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:textAlignment="center"
-            android:textColor="#ffffff"
+            android:textColor="@color/white"
             android:text="Don't have an account? Signup" />
 
     </LinearLayout>
-
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="0dp"

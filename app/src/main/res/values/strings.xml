@@ -1,4 +1,28 @@
 <resources>
-    <string name="app_name">Blood Bank</string>
+    <string name="app_name">Blood Drop</string>
     <string name="donate_blood">Donate Blood, Save Life</string>
+    <string name="stay_connected">Stay Connected</string>
+    <string name="name">Name</string>
+    <string name="dob">Date Of Birth</string>
+    <string name="address">Address</string>
+    <string name="password">Password</string>
+    <string name="phone">Phone</string>
+    <string name="blood_group">Blood Group</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login">Log In</string>
+    <string name="email">Email</string>
+    <string-array name="blood">
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>O+</item>
+        <item>O-</item>
+    </string-array>
+
 </resources>
