@@ -10,4 +10,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="btnbg">#18206F</color>
     <color name="editTextbg">#f2f5fa</color>
+    <color name="header_text">#BEC66E</color>
+    <color name="text_header">#E6EE9C</color>
 </resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "685650828403",
+    "project_id": "blood-drop-b02fa",
+    "storage_bucket": "blood-drop-b02fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:685650828403:android:6f47fbd1c1320898131e06",
+        "android_client_info": {
+          "package_name": "com.example.blood_bank"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3XG5FXs6x7wGedrSREbTFlCL97cBeOs8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
