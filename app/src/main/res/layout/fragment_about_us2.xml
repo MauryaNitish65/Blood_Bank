@@ -125,7 +125,7 @@
                                 xmlns:app="http://schemas.android.com/apk/res-auto"
                                 android:layout_width="96dp"
                                 android:layout_height="96dp"
-                                android:src="@drawable/shivanshu"
+                                android:src="@drawable/nitish"
                                 android:layout_marginTop="15dp"
                                 android:layout_gravity="center_horizontal"
                                 app:civ_border_color="#FF000000"/>
@@ -133,7 +133,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Shivanshu Prasad"
+                                android:text="Nitish Kumar Maurya"
                                 android:layout_gravity="center_horizontal"
                                 android:textColor="@color/black"
                                 android:gravity="center"
@@ -143,7 +143,17 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Frontend Developer"
+                                android:text="Team Leader,"
+                                android:maxLines="1"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:layout_marginTop="4dp"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=" Frontend Developer"
                                 android:maxLines="1"
                                 android:layout_gravity="center_horizontal"
                                 android:gravity="center"
@@ -215,7 +225,7 @@
                                 xmlns:app="http://schemas.android.com/apk/res-auto"
                                 android:layout_width="96dp"
                                 android:layout_height="96dp"
-                                android:src="@drawable/nitish"
+                                android:src="@drawable/shivanshu"
                                 android:layout_marginTop="15dp"
                                 android:layout_gravity="center_horizontal"
                                 app:civ_border_color="#FF000000"/>
@@ -223,7 +233,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Nitish Kumar Maurya"
+                                android:text="Shivanshu Prasad"
                                 android:layout_gravity="center_horizontal"
                                 android:textColor="@color/black"
                                 android:textSize="20sp"

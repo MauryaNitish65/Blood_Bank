@@ -4,18 +4,22 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
-import com.google.android.material.navigation.NavigationBarView;
 import com.example.blood_bank.databinding.ActivityMainBinding;
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    ActivityMainBinding binding;
-
+    private ActivityMainBinding binding;
+    private FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,11 +31,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
+        auth=FirebaseAuth.getInstance();
 
         // Navigation Drawer
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(MainActivity.this, binding.drawerLayout, binding.container.toolbar, R.string.closeDrawer, R.string.openDrawer);
         //noinspection deprecation
-        binding.drawerLayout.setDrawerListener(toggle);
+        binding.drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
         binding.navigationView.setNavigationItemSelectedListener(MainActivity.this);
@@ -41,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             int id = item.getItemId();
 
             if (id == R.id.bottom_nav_home)
-                Toast.makeText(MainActivity.this, "Bottom " + getString(R.string.home), Toast.LENGTH_SHORT).show();
+                loadFragment(new Home());
             else if (id == R.id.bottom_nav_donate) {
                 Toast.makeText(MainActivity.this, "Bottom " + getString(R.string.donate), Toast.LENGTH_SHORT).show();
             } else {
@@ -60,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (id == R.id.nav_drawer_map_view) {
             Toast.makeText(this, R.string.map_view, Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_drawer_profile) {
-            Toast.makeText(this, R.string.my_profile, Toast.LENGTH_SHORT).show();
+            loadFragment(new MyProfile());
         } else if (id == R.id.nav_drawer_requests) {
             Toast.makeText(this, R.string.requests, Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_drawer_hospital_service) {
@@ -68,9 +73,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_drawer_blood_bank_service) {
             Toast.makeText(this, R.string.blood_bank_service, Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_drawer_logout) {
-            Toast.makeText(this, R.string.logout, Toast.LENGTH_SHORT).show();
+            auth.signOut();
+            Toast.makeText(this, "Logged out", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, LogIn.class);
+            startActivity(intent);
         } else if (id == R.id.nav_drawer_about_us) {
-            Toast.makeText(this, R.string.about_us, Toast.LENGTH_SHORT).show();
+            loadFragment(new AboutUs());
         } else {
             Toast.makeText(this, R.string.rate_us, Toast.LENGTH_SHORT).show();
         }
@@ -78,6 +86,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         binding.drawerLayout.closeDrawer(GravityCompat.START);
 
         return true;
+    }
+
+    private void loadFragment(Fragment fragment) {
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.fragmentContainer, fragment);
+        ft.commit();
     }
 
     @Override

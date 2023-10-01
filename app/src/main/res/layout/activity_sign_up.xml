@@ -127,13 +127,14 @@
                     android:layout_height="wrap_content"
                     app:boxBackgroundColor="@color/white"
                     app:endIconMode="clear_text"
-                    app:startIconDrawable="@drawable/calendar"
+                    app:startIconDrawable="@drawable/birthday"
                     android:hint="@string/dob"
                     >
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/dob"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:focusable="false"
                         android:inputType="date"
                         />
 
@@ -152,15 +153,14 @@
                         android:layout_height="wrap_content"
                         android:text="@string/gender"
                         android:layout_weight="1"
+                        android:padding="5dp"
                         android:textSize="17sp"
-                        android:textColor="@color/red"
                         />
                     <com.google.android.material.radiobutton.MaterialRadioButton
                         android:id="@+id/male"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/male"
-                        android:textColor="@color/red"
                         android:textSize="16sp"
                         android:layout_weight="1"
                         />
@@ -169,7 +169,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/female"
-                        android:textColor="@color/red"
+                        android:layout_weight="1"
+                        android:textSize="16sp"
+                        />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/other"
                         android:layout_weight="1"
                         android:textSize="16sp"
                         />
@@ -211,7 +218,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:boxBackgroundColor="@color/white"
-                    app:startIconDrawable="@drawable/bloodtype"
+                    app:startIconDrawable="@drawable/diseases"
                     android:hint="@string/disease"
                     >
                     <AutoCompleteTextView
